@@ -15,11 +15,27 @@ export const initialState = {
     ]
   };
 
+
+  //Everytime parameter is undefined set the parameter to current state example const reducer = (state = initialState, action) =>
 const reducer = (state = initialState, action) => {
     //Switch statement
     //if or else if blocks become cases
-    
-   return state;
-}
+    switch(action.type) {
+        case "Add Item":
+            return {
+                ...state,
+            }
+        case "Remove Item":
+            return {
+                state
+            }  
+        case "Update Cost":
+            return {
+                state
+            }  
+        default:
+            return state;         
+    }    
+};
 
 export default reducer;
